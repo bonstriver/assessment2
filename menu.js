@@ -69,8 +69,8 @@ console.log(pizza.tags[1])
     Print the value of your new price variable.
 */
 
-let {price: price} = pizza
-console.log(price)
+const {price} = pizza
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -79,8 +79,8 @@ console.log(price)
     Print the value of your category variable. 
 */
 
-let {category: category} = pizza
-console.log(category)
+const {category} = pizza
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -146,11 +146,9 @@ foodArr = [
     your food objects has.
 */
 
-const checkDairy = () => {
-    return foodArr.contains('dairy')
-}
-
-const filteredFood = foodArr.filter(checkDairy)
+const filteredFood = foodArr.filter(pizzaObj=> {
+    return pizzaObj.tags.includes('dairy')
+})
 console.log(filteredFood)
 
 
@@ -194,8 +192,15 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    const filteredArr = foodArr.filter(pizza => {
+        if (type === 'above'){
+            return pizza[property] > number
+        } else if (type = 'below'){
+            return pizza[property] < number
+        } else return 'You did not pass a valid data type'
+    }) 
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -204,4 +209,4 @@ console.log(filteredFood)
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty(85, 6, 'above'))
