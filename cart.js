@@ -33,18 +33,11 @@ const cart = [
     }
 ]
 
-// const callback = (previousValue, currentValue) => {
-//     return previousValue + currentValue
-// }
+const summedPrice = cart.reduce((acc, ord) => { //PRACTICE MORE REDUCE
+    return acc + ord.price
+}, 0)
 
-// const summedPrice = cart.reduce(callback)
-
-//I'm struggling with reduce and with callbacks and running out of time. I'm going to do it a different way
-
-const sumPrice = (arr) =>{
-    cons
-}
-
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -61,9 +54,11 @@ const sumPrice = (arr) =>{
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    (cartTotal * (1 + tax)) - couponValue
+}
 
-
+console.log(calcFinalPrice(10, 2, .25))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -86,8 +81,10 @@ const sumPrice = (arr) =>{
 */
 
 /*
-    TEXT ANSWER HERE
-
+    name string
+    address string
+    phone number string
+    number of toes num
 */
 
 /*
@@ -95,4 +92,9 @@ const sumPrice = (arr) =>{
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'Brandon Daniel Martinez',
+    address: '42 Wallaby Way Sydney',
+    phone: '867-5309',
+    toes: 10
+}
