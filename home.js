@@ -62,7 +62,7 @@ const canWeDeliver = (zipCode) => {
         
     }
 
-// console.log(canWeDeliver(85205))
+console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -83,6 +83,7 @@ const canWeDeliver = (zipCode) => {
 
 const canWeDeliverTwo = (zipCode) => {
     let canDeliver = `You're in our delivery zone!`
+    // if you have time, try to solve w/ boolean
     let cannotDeliver = `Sorry, we can't deliver to that address`
     if (deliveryAreaZipCodes.includes(zipCode)){
         return canDeliver
@@ -125,10 +126,8 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-function replaceTitle(title){
-    title = title.title.replace("15","10")
-    deals.
-}
+deals[0].title = deals[0].title.replace('15', '10')
+// console.log(deals)
 
 
 /*
@@ -144,4 +143,5 @@ function replaceTitle(title){
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace('March', 'April')
+// console.log(deals)
